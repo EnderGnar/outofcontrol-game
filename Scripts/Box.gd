@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends KinematicBody2D
 
 var health = 3
 
@@ -8,8 +8,8 @@ func _ready():
 	$Sprite.animation = "default"
 	pass # Replace with function body.
 
-func collision(_bullet):
-	health -= 1
+func collision(bullet):
+	health -= bullet.damage
 	if health <= 0:
 		$Sprite.animation = "destroyed"
 		$Sprite.play()

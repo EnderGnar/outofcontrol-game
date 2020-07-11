@@ -3,6 +3,9 @@ extends KinematicBody2D
 var dir = Vector2(1,0)
 
 var speed = 300
+var exploded = false
+
+var damage = 1
 
 export(PackedScene) var Explosion	
 
@@ -18,8 +21,15 @@ func _physics_process(delta):
 		if collider.get_class() != 'TileMap':
 			collider.collision(self)
 
-		var explosion = Explosion.instance()
-		explosion.position = position
-		explosion.get_node("Particle").emitting = true
-		get_parent().add_child(explosion)
-		get_parent().remove_child(self)
+		explode()
+
+func collision(_bullet):
+	explode()
+
+func explode():
+	if exploded: return
+	exploded = true
+	var explosion = Explosion.instance()
+	explosion.position = position
+	get_parent().add_child(explosion)
+	get_parent().remove_child(self)

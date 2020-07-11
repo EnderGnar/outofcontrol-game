@@ -72,7 +72,7 @@ script = ExtResource( 7 )
 [node name="Explosion" parent="." instance=ExtResource( 4 )]
 
 [node name="Box" parent="." instance=ExtResource( 5 )]
-position = Vector2( 96, 80 )
+position = Vector2( 57.6421, 74.2642 )
 
 [node name="Scientist" parent="." instance=ExtResource( 6 )]
 position = Vector2( 263.838, 194.245 )
@@ -87,4 +87,28 @@ position = Vector2( 407.55, 55 )
 Waypoints = [ Vector2( 407, 55 ) ]
 
 [node name="Explosive" parent="." instance=ExtResource( 8 )]
-position = Vector2( 39.5051, 72.1989 )
+position = Vector2( 83.2402, 88.6892 )
+
+[node name="Explosive2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 36.1891, 78.078 )
+
+[node name="Explosive3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 104.57, 86.5204 )
+
+[node name="Explosive5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 123.928, 83.6525 )
+
+[node name="Explosive6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 144.003, 80.4262 )
+
+[node name="Explosive7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 166.23, 78.6337 )
+
+[node name="Explosive8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 189.531, 76.8413 )
+
+[node name="Explosive9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 213.191, 76.4828 )
+
+[node name="Explosive4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 61.8566, 92.2382 )

@@ -54,3 +54,5 @@ func _physics_process(delta):
 	return move_and_slide(dir * speed)
 
 
+func collision(_bullet):
+	modulate = Color('#880000')
