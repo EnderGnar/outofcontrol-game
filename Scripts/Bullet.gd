@@ -5,6 +5,8 @@ var dir = Vector2(1,0)
 var speed = 300
 var exploded = false
 
+var type = "bullet"
+
 var damage = 1
 
 export(PackedScene) var Explosion	

@@ -35,9 +35,9 @@ func _physics_process(delta):
 		
 		if pow(move.x, 2) > pow(move.y, 2):
 			if move.x > 0:
-				$Sprite.animation = "default" #"move_right"
+				$Sprite.animation = "move_right"
 			else:
-				$Sprite.animation = "default" #"move_left"
+				$Sprite.animation = "move_left"
 		else:
 			if move.y > 0:
 				$Sprite.animation = "move_down"

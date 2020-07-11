@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Frame013.png-3d4affea30d2812ef6a9709c2f08c8f6.stex"
+path="res://.import/Frame013.png-f18a0f3d7bcfc1e67f1864a652c09a89.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixelart/idle scientist/Frame013.png"
-dest_files=[ "res://.import/Frame013.png-3d4affea30d2812ef6a9709c2f08c8f6.stex" ]
+source_file="res://Assets/Character/scientist/default/Frame013.png"
+dest_files=[ "res://.import/Frame013.png-f18a0f3d7bcfc1e67f1864a652c09a89.stex" ]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
-process/premult_alpha=false
+process/fix_alpha_border=false
+process/premult_alpha=true
 process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false

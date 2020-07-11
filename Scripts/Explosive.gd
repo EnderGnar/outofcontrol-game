@@ -1,9 +1,11 @@
 extends KinematicBody2D
 
 var health = 1
+var type = "explosive"
 
 var radius = 30
 var activated = false
+var exploded = false
 var time = 0
 var wait_time = 0.2
 
@@ -20,7 +22,9 @@ func _ready():
 
 func _physics_process(delta):
 	if activated:
-		time += wait_time
+		time += delta
+		if time >= wait_time:
+			explode()
 
 
 func collision(_bullet):
@@ -30,7 +34,8 @@ func collision(_bullet):
 		
 
 func explode():
-	
+	if exploded: return
+	exploded = true
 	var ex = $Explosion
 	ex.get_node('Collider').disabled = false
 	var bodies = ex.get_overlapping_bodies()

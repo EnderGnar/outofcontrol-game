@@ -51,6 +51,17 @@ func _physics_process(delta):
 		if shootDirection.y < 0:
 			$Sprite.animation = "move_up"
 
+	else:
+		if shootDirection.x > 0:
+			$Sprite.animation = "move_right"
+		if shootDirection.x < 0:
+			$Sprite.animation = "move_left"
+		if shootDirection.y > 0:
+			$Sprite.animation = "idle_down"
+		if shootDirection.y < 0:
+			$Sprite.animation = "move_up"
+
+
 	return move_and_slide(dir * speed)
 
 
