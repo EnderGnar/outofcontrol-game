@@ -13,7 +13,7 @@ var shooting = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Animation.play()
+	$Sprite.play()
 	pass # Replace with function body.
 
 func _physics_process(delta):
@@ -38,6 +38,18 @@ func _physics_process(delta):
 			bullet.dir = shootDirection
 			bullet.position = position
 			get_parent().add_child(bullet)
+
+
+	#Animation
+	if dir.length() > 0:
+		if shootDirection.x > 0:
+			$Sprite.animation = "move_right"
+		if shootDirection.x < 0:
+			$Sprite.animation = "move_left"
+		if shootDirection.y > 0:
+			$Sprite.animation = "move_down"
+		if shootDirection.y < 0:
+			$Sprite.animation = "move_up"
 
 	return move_and_slide(dir * speed)
 
