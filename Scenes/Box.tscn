@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Objects/box/default.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Box.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Objects/box/destroyed/0.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Objects/box/destroyed/1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Objects/box/destroyed/2.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "destroyed",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[node name="Box" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 8, 0 )
+frames = SubResource( 1 )
+animation = "destroyed"
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2( 8, 8 )
+shape = SubResource( 2 )

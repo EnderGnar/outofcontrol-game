@@ -1,14 +1,58 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=49 format=2]
 
-[ext_resource path="res://Assets/Character/soldier front without gun.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Character/player/walking front/Frame001.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Character/player/walking front/Frame005.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Bullet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Character/player/walking front/Frame006.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Character/player/walking front/Frame007.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Character/player/walking front/Frame008.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Character/player/walking front/Frame010.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Character/player/walking front/Frame009.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Character/player/walking front/Frame002.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Character/player/walking front/Frame011.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Character/player/walking front/Frame004.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Character/player/walking front/Frame003.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Character/player/walking front/Frame013.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Character/player/walking front/Frame026.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Character/player/walking front/Frame022.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Character/player/walking front/Frame031.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Character/player/walking front/Frame033.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Character/player/walking front/Frame034.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Character/player/walking front/Frame028.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Character/player/walking front/Frame027.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Character/player/walking front/Frame038.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Character/player/walking front/Frame039.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Character/player/walking front/Frame032.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Character/player/walking front/Frame037.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Character/player/walking front/Frame024.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Character/player/walking front/Frame016.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Character/player/walking front/Frame040.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Character/player/walking front/Frame020.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Character/player/walking front/Frame041.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Character/player/walking front/Frame029.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Character/player/walking front/Frame042.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Character/player/walking front/Frame043.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Character/player/walking front/Frame025.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Character/player/walking front/Frame018.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Character/player/walking front/Frame012.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Character/player/walking front/Frame021.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Character/player/walking front/Frame030.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Character/player/walking front/Frame035.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Character/player/walking front/Frame036.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Character/player/walking front/Frame014.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Character/player/walking front/Frame017.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Character/player/walking front/Frame019.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Character/player/walking front/Frame023.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Character/player/walking front/Frame015.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Character/player/walking front/Frame044.png" type="Texture" id=46]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 36 ), ExtResource( 14 ), ExtResource( 41 ), ExtResource( 45 ), ExtResource( 27 ), ExtResource( 42 ), ExtResource( 35 ), ExtResource( 43 ), ExtResource( 29 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 44 ), ExtResource( 26 ), ExtResource( 34 ), ExtResource( 15 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 31 ), ExtResource( 38 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 25 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 46 ) ],
 "loop": true,
-"name": "default",
-"speed": 2.0
+"name": "down",
+"speed": 7.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -16,13 +60,16 @@ radius = 3.87783
 height = 2.67666
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 4
 script = ExtResource( 2 )
+Bullet = ExtResource( 4 )
 
 [node name="Animation" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -10.7575 )
+position = Vector2( 0, -12.8216 )
 frames = SubResource( 1 )
+animation = "down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 3.77873 )
+position = Vector2( 0, 0.00944281 )
 rotation = 1.57275
 shape = SubResource( 2 )
