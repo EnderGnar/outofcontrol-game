@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Frame027.png-b11ea99091ef4f47f4f91634aada862a.stex"
+path="res://.import/Frame027.png-b76d1d6ff91c3f385a84a86e8379e900.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Character/scientist/move_down/Frame027.png"
-dest_files=[ "res://.import/Frame027.png-b11ea99091ef4f47f4f91634aada862a.stex" ]
+source_file="res://pixelart/scientist walking down/Frame027.png"
+dest_files=[ "res://.import/Frame027.png-b76d1d6ff91c3f385a84a86e8379e900.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
