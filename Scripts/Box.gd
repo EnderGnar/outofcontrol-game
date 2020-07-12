@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var health = 3
+export var health = 3
 
 
 # Called when the node enters the scene tree for the first time.
