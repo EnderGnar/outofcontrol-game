@@ -6,6 +6,7 @@ var pressed = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Sprite.animation = "default"
+	position.y -= 0.001
 	pass # Replace with function body.
 
 func _physics_process(_delta):

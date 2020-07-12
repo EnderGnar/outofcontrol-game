@@ -24,7 +24,8 @@ func _physics_process(delta):
 		
 		var col = move_and_collide(move)
 
-		if col:
+		#only if collision in front
+		if col && col.normal.dot(move) / (col.normal.length() * move.length()) < -0.7:
 			position = lastPosition
 			goal = lastPosition
 	if (goal- position).length() == 0:
