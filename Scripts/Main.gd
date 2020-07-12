@@ -4,6 +4,7 @@ onready var active = get_node('main')
 
 func _ready():
 	active.fadein()
+	$Sound.playing = true
 	pass 
 
 func change(to):
