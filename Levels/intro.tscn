@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/TileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Flag.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/MainCam.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/World.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Fonts/AVENIR.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Assets/UI/restart.png" type="Texture" id=11]
+
+[node name="World" type="YSort"]
+script = ExtResource( 8 )
+
+[node name="Flag" parent="." instance=ExtResource( 3 )]
+position = Vector2( 65.5765, -23.3152 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 1 )
+z_index = -1
+tile_data = PoolIntArray( -262156, 1, 0, -262155, 1, 0, -262154, 1, 0, -262153, 1, 0, -262152, 1, 0, -262151, 1, 0, -262150, 1, 0, -262149, 1, 0, -262148, 1, 0, -262147, 1, 0, -262146, 1, 0, -262145, 1, 0, -327680, 1, 0, -327679, 1, 0, -327678, 1, 0, -327677, 1, 0, -327676, 1, 0, -327675, 1, 0, -327674, 1, 0, -196620, 1, 0, -196619, 0, 0, -196618, 0, 0, -196617, 0, 0, -196616, 0, 0, -196615, 0, 0, -196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262144, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 1, 0, -131084, 1, 0, -131083, 0, 0, -131082, 0, 0, -131081, 0, 0, -131080, 0, 0, -131079, 0, 0, -131078, 0, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 1, 0, -65548, 1, 0, -65547, 0, 0, -65546, 0, 0, -65545, 0, 0, -65544, 0, 0, -65543, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 1, 0, -12, 1, 0, -11, 0, 0, -10, 0, 0, -9, 0, 0, -8, 0, 0, -7, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 1, 0, 65524, 1, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 1, 0, 131060, 1, 0, 131061, 0, 0, 131062, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 1, 0, 196596, 1, 0, 196597, 0, 0, 196598, 0, 0, 196599, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 1, 0, 262132, 1, 0, 262133, 1, 0, 262134, 1, 0, 262135, 1, 0, 262136, 1, 0, 262137, 1, 0, 262138, 1, 0, 262139, 1, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="MainCam" type="Camera2D" parent="Player"]
+zoom = Vector2( 0.333, 0.333 )
+script = ExtResource( 7 )
+
+[node name="home" type="Button" parent="Player/MainCam"]
+margin_left = 129.108
+margin_top = -94.606
+margin_right = 260.108
+margin_bottom = -16.606
+rect_scale = Vector2( 0.3, 0.3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="home" type="RichTextLabel" parent="Player/MainCam/home"]
+margin_left = -33.1063
+margin_top = -13.3977
+margin_right = 291.894
+margin_bottom = 83.6023
+rect_scale = Vector2( 0.6, 0.6 )
+mouse_filter = 1
+custom_fonts/normal_font = ExtResource( 10 )
+custom_constants/table_vseparation = 0
+bbcode_enabled = true
+bbcode_text = "Home"
+text = "Home"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restart" type="Button" parent="Player/MainCam"]
+margin_left = 140.078
+margin_top = -82.3853
+margin_right = 229.078
+margin_bottom = -3.38528
+rect_scale = Vector2( 0.3, 0.3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Player/MainCam/restart"]
+position = Vector2( 46.1035, 51.226 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="ColorRect" type="ColorRect" parent="Player/MainCam"]
+visible = false
+margin_left = -170.0
+margin_top = -99.0
+margin_right = 171.0
+margin_bottom = 103.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = -166.741
+margin_top = -61.5599
+margin_right = 1318.26
+margin_bottom = 1972.44
+rect_scale = Vector2( 0.1, 0.1 )
+custom_fonts/normal_font = ExtResource( 10 )
+text = "You're in the governement top secret lab to test a new weapon, however the weapon is out of control and won't stop shooting. follow the green flags and find the scientist that can help you stop shooting. 
+Careful, soldier, do not kill anyone!"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Player/MainCam/home" to="." method="home"]
+[connection signal="pressed" from="Player/MainCam/restart" to="." method="restart"]
