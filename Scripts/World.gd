@@ -30,6 +30,10 @@ func home():
 func restart():
 	get_tree().reload_current_scene()
 
+func next(name):
+	var dir = "res://Levels/" + name + ".tscn"
+	get_tree().change_scene(dir)
+
 func end(at):
 	if ending: return
 	goal = Vector2(at.x, at.y)

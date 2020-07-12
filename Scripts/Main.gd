@@ -13,4 +13,5 @@ func change(to):
 	active.fadein()
 
 func start(at):
-	get_tree().change_scene("res://Scenes/World.tscn")
+	var root = "res://Levels/" + at + ".tscn"
+	get_tree().change_scene(root)
