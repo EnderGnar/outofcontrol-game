@@ -14,6 +14,7 @@ func _physics_process(delta):
 		start()
 
 func start():
+	$Sound.playing = true
 	$Particle.emitting = true
 	$Timer.start()
 	started=true

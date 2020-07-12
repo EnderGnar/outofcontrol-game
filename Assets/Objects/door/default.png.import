@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scientist walking front.png-3afe27633829b536bba7654f00d590c5.stex"
+path="res://.import/default.png-ae8f67c94db1ed953040071973439433.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixelart/scientist walking front.png"
-dest_files=[ "res://.import/scientist walking front.png-3afe27633829b536bba7654f00d590c5.stex" ]
+source_file="res://Assets/Objects/door/default.png"
+dest_files=[ "res://.import/default.png-ae8f67c94db1ed953040071973439433.stex" ]
 
 [params]
 

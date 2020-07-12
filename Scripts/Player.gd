@@ -34,6 +34,7 @@ func _physics_process(delta):
 		counter += delta
 		if counter >= spb:
 			counter = 0
+			$Sound.playing = true
 			var bullet = Bullet.instance()
 			bullet.dir = shootDirection
 			bullet.position = position

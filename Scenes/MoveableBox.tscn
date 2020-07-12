@@ -12,7 +12,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 7.81901, 7.83252 )
+extents = Vector2( 7.62716, 6.7476 )
 
 [node name="MoveableBox" type="KinematicBody2D"]
 collision_layer = 4

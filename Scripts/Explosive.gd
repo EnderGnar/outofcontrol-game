@@ -35,6 +35,7 @@ func collision(_bullet):
 
 func explode():
 	if exploded: return
+	$Sprite.animation = "destroyed"
 	exploded = true
 	var ex = $Explosion
 	ex.get_node('Collider').disabled = false
