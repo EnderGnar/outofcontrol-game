@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="outofcontrol"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://UI/Main.tscn"
 config/icon="res://Assets/UI/icon.png"
 
 [display]

@@ -20,7 +20,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 2.08531 )
+extents = Vector2( 8, 2.91534 )
 
 [node name="Door" type="KinematicBody2D"]
 collision_layer = 4
@@ -34,5 +34,5 @@ frame = 2
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-position = Vector2( 8.19888, 7.87817 )
+position = Vector2( 8, 6.10923 )
 shape = SubResource( 2 )

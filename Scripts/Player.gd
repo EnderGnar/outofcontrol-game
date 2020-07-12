@@ -68,3 +68,4 @@ func _physics_process(delta):
 
 func collision(_bullet):
 	modulate = Color('#880000')
+	get_parent().end(position + Vector2(0, -15))
